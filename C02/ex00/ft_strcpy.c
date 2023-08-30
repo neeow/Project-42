@@ -35,5 +35,5 @@ int        main(void)
 
 	ptr = string;
 	ptr2 = string2;
-	printf("%s", ft_strcpy(ptr, ptr2));
+	printf("%d", ft_strcpy(ptr, ptr2));
 }
