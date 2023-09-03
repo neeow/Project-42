@@ -1,33 +1,14 @@
-// #include <stdio.h>
-
-// char	*ft_strcat(char *dest, char *src, unsigned int)
-// {
-// 	unsigned int	i;
-// 	unsigned int	c;
-
-// 	i = 0;
-// 	while (dest[i] != '\0')
-// 	{
-// 		i++;
-// 	}
-// 	c = 0;
-// 	while (src[c] != '\0')
-// 	{
-// 		dest[i] = src [c];
-// 		i++;
-// 		c++;
-// 	}
-// 	dest[i] = '\0';
-// 	return (dest);
-// }
-
-// int	main()
-// {
-// 	char src[] = "Codam";
-// 	char dest[] = "42 ";
-// 	printf("%s", ft_strcat(dest, src));
-// }
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strncat.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: nchan <nchan@student.codam.nl>               +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2023/09/03 17:40:07 by nchan         #+#    #+#                 */
+/*   Updated: 2023/09/03 17:40:08 by nchan         ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
