@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 
-int	ft_str_printable(char *str)
+int	ft_str_is_printable(char *str)
 {
 	int	i;
 
@@ -30,8 +30,8 @@ int	ft_str_printable(char *str)
 /*
 int	main(void)
 {
-	printf("%d", ft_str_printable("abc"));
-	printf("\n%d", ft_str_printable("€"));
-	printf("\n%d", ft_str_printable("\n"));
+	printf("%d", ft_str_is_printable("abc"));
+	printf("\n%d", ft_str_is_printable("€"));
+	printf("\n%d", ft_str_is_printable("\n"));
 }
 */
