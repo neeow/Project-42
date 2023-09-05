@@ -1,43 +1,59 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strncat.c                                       :+:    :+:            */
+/*   ft_strstr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: nchan <nchan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/09/03 17:40:07 by nchan         #+#    #+#                 */
-/*   Updated: 2023/09/05 15:51:41 by nchan         ########   odam.nl         */
+/*   Created: 2023/09/05 13:26:08 by nchan         #+#    #+#                 */
+/*   Updated: 2023/09/05 13:28:44 by nchan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdio.h>
+#include <string.h>
 
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
+int	str_length(char *str)
 {
 	int	i;
-	int	c;
 
 	i = 0;
-	c = 0;
-	while (dest[i] != '\0')
+	while (str[i] != '\0')
 	{
 		i++;
 	}
-	while (src[c] != '\0' && nb > 0)
-	{
-		dest[i] = src[c];
-		i++;
-		c++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	return (i);
 }
+
+char	*ft_strstr(char *str, char *to_find)
+{
+	int	i;
+	int	j;
+	int	tf_l;
+
+	tf_l = str_length(to_find);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		j = 0;
+		while (j < tf_l && str[i + j] == to_find[j])
+		{
+			j++;
+		}
+		if (j == tf_l)
+		{
+			return (str + i);
+		}
+		i++;
+	}
+	return (0);
+}
+
 /*
 int	main()
 {
-	char dest[] = "42 ";
-	char src[] = "Codam";
-	printf("%s", ft_strncat(dest, src, 7));
+	char str[] = "begin from start";
+	char find[] = "from";
+	printf("%s", ft_strstr(str, find));
 }
 */
