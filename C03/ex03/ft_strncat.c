@@ -6,38 +6,41 @@
 /*   By: nchan <nchan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/09/03 17:40:07 by nchan         #+#    #+#                 */
-/*   Updated: 2023/09/05 15:51:41 by nchan         ########   odam.nl         */
+/*   Updated: 2023/09/05 21:12:53 by nchan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdio.h>
+#include <string.h>
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	i;
-	int	c;
+	unsigned int	i;
+	unsigned int	dest_i;
 
 	i = 0;
-	c = 0;
-	while (dest[i] != '\0')
+	dest_i = 0;
+	while (dest[dest_i] != '\0')
 	{
+		dest_i++;
+	}
+	while (i < nb && src[i] != '\0')
+	{
+		dest[dest_i] = src[i];
+		dest_i++;
 		i++;
 	}
-	while (src[c] != '\0' && nb > 0)
-	{
-		dest[i] = src[c];
-		i++;
-		c++;
-	}
-	dest[i] = '\0';
+	dest[dest_i] = '\0';
 	return (dest);
 }
-/*
-int	main()
-{
-	char dest[] = "42 ";
-	char src[] = "Codam";
-	printf("%s", ft_strncat(dest, src, 7));
-}
-*/
+
+// int	main(void)
+// {
+// 	char destination[20] = "Hello, ";
+// 	char source[] = "Codam!";
+
+// 	strncat(destination, source, 3);
+// 	// ft_strncat(destination, source, 3);
+// 	printf("Concatenated string: %s\n", destination);
+// 	return (0);}
+//

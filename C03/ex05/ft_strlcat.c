@@ -6,56 +6,80 @@
 /*   By: nchan <nchan@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/09/05 15:48:33 by nchan         #+#    #+#                 */
-/*   Updated: 2023/09/05 15:49:52 by nchan         ########   odam.nl         */
+/*   Updated: 2023/09/05 21:20:21 by nchan         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
 #include <stdio.h>
 
-int	ft_strlen(char *str)
+unsigned int	length( char *str)
 {
-	int	i;
+	unsigned int	len;
+
+	len = 0;
+	while (str[len] != '\0')
+	{
+		len++;
+	}
+	return (len);
+}
+
+char	ft_strncat(char *dest, char *src, unsigned int nb)
+{
+	unsigned int	i;
+	unsigned int	dest_i;
 
 	i = 0;
-	while (str[i] != '\0')
+	dest_i = 0;
+	while (dest[dest_i] != '\0')
 	{
+		dest_i++;
+	}
+	while (i < nb)
+	{
+		dest[dest_i] = src[i];
+		dest_i++;
 		i++;
 	}
-	return (i);
+	dest[dest_i] = '\0';
+	return (*dest);
 }
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	dlen;
-	unsigned int	slen;
+	unsigned int	dest_len;
+	unsigned int	src_len ;
+	unsigned int	remaining_space;
 
-	i = 0;
-	j = 0;
-	while (dest[j] != '\0')
+	dest_len = length(dest);
+	src_len = length(src);
+	if (size <= dest_len)
 	{
-		j++;
+		return (size + src_len);
 	}
-	dlen = j;
-	slen = ft_strlen(src);
-	if (size == 0 || size <= dlen)
-		return (slen + size);
-	while (src [i] != '\0' && i < size - dlen - 1)
+	remaining_space = size - dest_len - 1;
+	if (src_len < remaining_space)
 	{
-		dest[j] = src[i];
-		i++;
-		j++;
+		ft_strncat(dest + dest_len, src, src_len);
 	}
-	dest[j] = '\0';
-	return (dlen + slen);
+	else
+	{
+		ft_strncat(dest + dest_len, src, remaining_space);
+	}
+	return (dest_len + src_len);
 }
-/*
-int main (void)
-{
-	char src[] = "ex05";
-    	char dest[] = "lolo";
-    printf("%i \n", ft_strlcat(dest, src, 9));
-    printf("%s \n", dest);
-}
-*/
+
+// int	main(void)
+// {
+// 	int		result;
+// 	char*	src;
+
+// 	char dest[50] = "Welcome, ";
+
+// 	src = "testing this code!";
+// 	// result = ft_strlcat(dest, src, 27);
+// 	// result = strlcat(dest, src, 27);
+// 	printf("%d", result);
+// 	return (0);
+// }
