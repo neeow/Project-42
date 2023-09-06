@@ -7,8 +7,6 @@
 
 <div align="center">
  
- **42 Piscine**
-
 Progress in 42 Piscine
 
 Shell00 (succeeded with 50%)
