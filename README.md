@@ -1,4 +1,7 @@
-# 42-Piscine
+<div align="center">
+ 
+ **42 Piscine**
+
 Progress in 42 Piscine
 
 Shell00 (succeeded with 50%)
@@ -15,3 +18,4 @@ C04 (not yet)
 
 C06 (not yet)
 
+ </div>
