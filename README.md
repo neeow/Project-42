@@ -2,13 +2,8 @@
     <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=My+42+Piscine+progress!+👋;" />
 </h1>
 
-
-
-
 <div align="center">
  
-Progress in 42 Piscine
-
 Shell00 (succeeded with 50%)
 
 C00 (succeeded with 100%)
