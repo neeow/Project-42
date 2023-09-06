@@ -16,6 +16,6 @@ C03 (succeeded with 100%)
 
 C04 (not yet)
 
-C06 (not yet)
+C06 (succeeded with 100%)
 
  </div>
