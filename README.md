@@ -3,19 +3,21 @@
 </h1>
 
 <div align="center">
- 
-Shell00 (succeeded with 50%)
 
-C00 (succeeded with 100%)
+✅ Shell00 (succeeded with 50%) ✅
 
-C01 (succeeded with 100%)
+✅ C00 (succeeded with 100%) ✅
 
-C02 (succeeded with 65%)
+✅ C01 (succeeded with 100%) ✅
 
-C03 (succeeded with 100%)
+✅ C02 (succeeded with 65%) ✅
 
-C04 (succeeded with 100%)
+✅ C03 (succeeded with 100%) ✅
 
-C06 (succeeded with 100%)
+✅ C04 (succeeded with 100%) ✅
+
+✅ C06 (succeeded with 100%) ✅
+
+❌ Shell01, C05, C07, C08, C09, C10, C11, C12, C13 ❌
 
  </div>
