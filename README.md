@@ -14,7 +14,7 @@ C02 (succeeded with 65%)
 
 C03 (succeeded with 100%)
 
-C04 (evaluating...)
+C04 (succeeded with 100%)
 
 C06 (succeeded with 100%)
 
